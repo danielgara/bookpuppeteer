@@ -26,4 +26,12 @@ describe('Admin Page', () => {
     after(async () => {
         await browser.close();
     });
+
+    it('Should redirect to the login page', async () => {
+        const response = await pageModel.go();
+        response.request().redirectChain()[0].response().status().should.equal(302);
+        response.request().redirectChain()[0].response().url().should.contain('admin');
+        response.status().should.equal(200);
+        response.url().should.contain('login');
+    });
 });

@@ -1,3 +1,6 @@
 /chapter01/node_modules/*
 /chapter02/node_modules/*
 /chapter03/node_modules/*
+/chapter03/init/node_modules/*
+/chapter03/init/vuejs-firebase-shopping-cart/node_modules/*
+/chapter04/node_modules/*
